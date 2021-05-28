@@ -5,27 +5,7 @@
 }
 body{
     background-color: #888888;
-    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.h1-content {
-    font-size: 1rem;
-
-}
-.login-square{
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
-}
-p, button, input {
-    margin: 5px;
-    padding: 5px;
-}
-p{
-    text-align: center;
-}
+ 
