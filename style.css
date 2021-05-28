@@ -2,10 +2,62 @@
     margin: 0;
     padding:0;
     font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 body{
-    background-color: #888888;
+    background-color: white;
     height: 100vh;
     width: 100vw;
-}
  
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 50%;
+    width: 50%;
+    border: 1px solid red;
+    margin-top: 20px;
+}
+footer{
+    background-color:rgba(161, 159, 159, 0.534) ;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div .login-square .formulario label{
+    display: block;
+    text-align: center;
+}
+div h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 10px;
+}
+.formulario {
+    margin: 10px;
+    padding: 10px;
+}
+.btn-enviar{
+    display: block;
+    color: rgb(19, 15, 15);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 60px;
+}
+.login-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.formulario input{
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}

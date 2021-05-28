@@ -2,9 +2,9 @@
 session_start();
 
 /* USer not authenticated yet detection */
-//if(!isset($_SESSION['usuario'])) 
+//if(!isset($_SESSION['usuario']))
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,25 +15,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     <title>DevFinnace</title>
 </head>
 <body>
-    <main>
-        <div class="h1-content">
-            <h1>Welcome to my first Login Page</h1>
+    <main class="main">
+        <div class="container">
+            <div>
+                <h1>Welcome to my first Login Page</h1>
+            </div>
+                <div class="login-square">
+                    <form method="POST" action="index.php" class="formulario">
+                    <label for="user">User</label>
+                    <input type="text" name="user"  id="user">
+                    <label for="passwd">Password</label>
+                    <input type="password" name="passwd"  id="passwd">
+                    <input type="submit" name="enviar" value="enviar" class="btn-enviar">
+                    </form>
+                </div>
         </div>
-        <div class="login-square">
-            <form method="POST" action="index.php">
-            <label for="user">User</label>
-            <input type="text" name="user"  id="user">
-            <label for="passwd">Password</label>
-            <input type="password" name="passwd"  id="passwd">
-            <input type="submit" name="enviar" value="enviar">
-            </form>
-        </div>
-        <?php 
-        if(isset($_SESSION['error'])){
-            echo "<div><strong>".$_SESSION['error']."</strong></div>";
-        }
-        ?>
-        
+        <?php
+            if (isset($_SESSION['error'])) {
+                    echo "<div><strong>" . $_SESSION['error'] . "</strong></div>";
+                }
+         ?>
+
     </main>
     <footer>
         <p>Desenvolvido por Inovação Tech</p>
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 </html>
 
 <?php
-}else{
+} else {
     /* formulário enviado, verificar usuário/senha */
     $login = @$_REQUEST['user'];
     $senha = @$_REQUEST['passwd'];
@@ -51,16 +53,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $user1 = 'matheus';
     $pass1 = '123456';
 
-    if($enviar){
-        if($login == $user1 && $senha == $pass1){
+    if ($enviar) {
+        if ($login == $user1 && $senha == $pass1) {
             $_SESSION['usuario'] = $login;
             $_SESSION['senha'] = $senha;
             unset($_SESSION['error']);
             header("Location: teste.php");
-        }else{
-            $_SESSION['error'] =  "Usuário ou senha inválidos!";
+        } else {
+            $_SESSION['error'] = "Usuário ou senha inválidos!";
             header("Location: index.php");
         }
-    }          
+    }
 
 }
