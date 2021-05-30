@@ -6,27 +6,30 @@
 }
 body{
     background-color: white;
-    height: 100vh;
-    width: 100vw;
+   
  
 }
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 98.1vh;
+    width: 98.1vw;
 }
 .container{
     height: 50%;
     width: 50%;
     border: 1px solid red;
-    margin-top: 20px;
+    background-color: #6f6f6f57;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     background-color:rgba(161, 159, 159, 0.534) ;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* margin-top: 20px; */
+    text-align: center;
 }
 
 div .login-square .formulario label{
